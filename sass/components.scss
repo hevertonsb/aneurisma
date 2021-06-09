@@ -13,15 +13,15 @@
         letter-spacing: .5rem;
         margin: 0;
         font-size: 3.5rem;
-        // z-index: 2;
-        // position: relative;
+        z-index: 2;
+        position: relative;
         @include md{
             font-size: 5.5rem;
         }
     }
     p{
-        // z-index: 2;
-        // position: relative;
+        z-index: 2;
+        position: relative;
         margin: 0;
         font-size: 1.65rem;
         margin-top: 3rem;
@@ -356,4 +356,13 @@ ul.list-theme{
         margin-top: 4rem;
         text-align: center;
     }
+}
+
+.mgstudio{
+    color:$blue;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1rem;
+    z-index: 10;
 }

@@ -2,6 +2,7 @@ footer{
     text-align: center;
     margin: auto;
     color:#5b5b5b;
+    position: relative;
     .container{
         @include md{
             display: flex;
