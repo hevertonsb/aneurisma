@@ -1,0 +1,75 @@
+footer{
+    text-align: center;
+    margin: auto;
+    color:#5b5b5b;
+    .container{
+        @include md{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+        }
+
+        p{
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        .logo{
+            @include md{
+                width: 50%;
+            }
+            @include lg{
+                margin-right: 9.5rem;
+                width: 33.4rem;
+            }
+            p{
+                max-width: 85%;
+                margin: 2rem auto;
+                @include md{
+                    max-width: initial;
+                }
+            }
+            img{
+                max-width: 285px;
+                @include md{
+                    max-width: initial;
+                }
+            }
+        }
+
+        .localizacao{
+            h4{
+                color:$blue;
+                text-transform: uppercase;
+                font-size: 2rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+            .content{
+                @include lg{
+                    display: flex;
+                }
+                a{
+                    color:#5b5b5b;
+                    &:hover{
+                        color: $blue-dark;
+                    }
+                }
+                p{
+                    margin-top: 0;
+                    span{
+                        display: block;
+                    }
+                }
+                div{
+                    @include lg{
+                        &:nth-child(1){
+                            margin-right: 6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

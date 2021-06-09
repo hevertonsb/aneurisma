@@ -1,0 +1,426 @@
+.banner-interna{
+    min-height: 33rem;
+    position: relative;
+    padding: 12.8rem;
+    text-transform: uppercase;
+    color:$white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $blue-dark;
+    background-position: center center;
+    background-size: cover;
+    background-attachment:initial;
+    ul{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        min-width: 30rem;
+        justify-content: center;
+        li{
+            margin: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            &:first-of-type{
+                position: relative;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 12px;
+                    background: url('../images/arrow-bread.png') no-repeat center center;
+                    right: -1.5rem;
+                }
+            }
+            a{
+                font-size: 1.6rem;
+                color:$white;
+            }
+        }
+    }
+
+    h2{
+        font-size: 4.2rem;
+        margin-bottom: 0;
+        letter-spacing: .06rem;
+        font-weight: 600;
+        margin-top: 3rem;
+    }
+
+    ul, h2{
+        position: relative;
+        z-index: 3;
+    }
+
+    #particles-js{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: 50% 50%;
+        canvas{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
+
+.banner-depoimento{
+    background-image: url('../images/banner-depoimentos_02.jpg');
+}
+
+.banner-oquee{
+    background-image: url('../images/banner-oquee_02.jpg');
+}
+
+.banner-sintomas{
+    background-image: url('../images/sintomas_02.jpg');
+}
+
+.banner-beneficios{
+    background-image: url('../images/banner-beneficios.jpg');
+}
+
+.banner-tratamento{
+    background-image: url('../images/banner-tratamento.jpg');
+}
+
+.banner-contato{
+    background-image: url('../images/banner-contato.jpg');
+}
+
+.banner-video{
+    background-image: url('../images/banner-videos.jpg');
+}
+
+.section-interna{
+    @include md{
+        background-image: 
+        url('../images/particulas-beneficios.png'),
+        url('../images/particulas-beneficios-02.png');
+        background-position:
+        left bottom,
+        right bottom;
+        background-repeat:no-repeat;
+    }
+    .container{
+        h3{
+            &:first-of-type{
+                color: $blue-dark;
+                text-transform: uppercase;
+                font-weight: 700;
+                font-size: 3.1rem;
+                margin-top: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        h4{
+            &:first-of-type{
+                text-transform: uppercase;
+                font-size: 2.2rem;
+                color:$gray;
+                margin:0 0 2rem 0;
+                line-height: 1.4;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.page-depoimento{
+    padding-bottom: 0 !important;
+    .container{
+        .author{
+            margin-bottom: 5rem;
+            .image{
+                margin-bottom: 1rem;
+                @include md{
+                    margin-bottom: 0;
+                }
+            }
+            @include md{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .text{
+                flex: 1;
+                font-size: 1.6rem;
+                color:$gray;
+                font-weight: 600;
+                @include md{
+                    margin-left: 3rem;
+                }
+                p{
+                    padding-bottom: 1rem;
+                    margin: 0;
+                    padding-top: 0;
+                }
+                h5{
+                    margin: 1rem 0 0 0;
+                    font-weight: 600;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        @include lg{
+            max-width: 70rem;
+        }
+        h3{
+            @include lg{
+                max-width: 60rem;
+            }
+        }
+        p{
+            font-size: 1.6rem;
+            color:$gray;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            &:last-of-type{
+                border-bottom: 1px solid #cedae4;
+                padding-bottom: 4.5rem;
+            }
+        }
+
+        .back-link{
+            color:$gray;
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            display: block;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+            &:hover{
+                color:$blue-dark;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 8px;
+                background: url('../images/arrow-back.jpg') no-repeat center center;
+                left: 0;
+            }
+        }
+    }
+}
+
+.page-oquee{
+    @include md{
+        padding: 12rem 0 !important;
+    }
+    .container{
+        .image-text{
+            &:first-of-type{
+                margin-top: 0;
+            }
+            &:last-of-type{
+                flex-direction: row-reverse;
+                .image{
+                    @include md{
+                        margin-left: 4.5rem;
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-internas{
+    padding-bottom: 0 !important;
+    .container{
+        @include lg{
+            max-width: 70rem;
+        }
+        p{
+            color:$gray;
+            margin-top: 2.5rem;
+            margin-bottom: 0;
+        }
+        .list-theme, img{
+            margin: 5rem 0;
+        }
+    }
+}
+
+.page-tratamento{
+    .container{
+        padding-bottom: 4rem;
+    }
+}
+
+.page-contato{
+    .container{
+        .image-text{
+            @include md{
+                margin-top: 0;
+                align-items: flex-start;
+            }
+            .image{
+                iframe{
+                    filter: grayscale(1);
+                    width: 100%;
+                    // pointer-events: none;
+                }
+                p{
+                    color:$blue;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+form{
+    margin-top: 3.5rem;
+    position: relative;
+    .row{
+        @include md{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .half-input{
+        @include md{
+            width: 48%;
+        }
+    }
+
+    label{
+        display: block;
+        cursor: pointer;
+        font-size: 1.6rem;
+        color:$gray;
+        margin-bottom: 1.3rem;
+    }
+
+    input[type='text'], input[type='email'], textarea{
+        border:2px solid #cdcdcd;
+        font-size: 1.5rem;
+        background-color: transparent;
+        width: 100%;
+        height: 4rem;
+        transition: border .2s ease;
+        margin-bottom: 2.5rem;
+        padding: 1.25rem;
+        &:focus{
+            outline: none;
+            border:none;
+            border-bottom: 2px solid $blue-dark;
+        }
+    }
+
+    input:-webkit-autofill{
+        -webkit-box-shadow: 0 0 0 30px #4ea5b8 inset;
+        padding: 1rem;
+    }
+
+    textarea{
+        resize: vertical;
+        height: 10rem;
+        @include md{
+            width: 100%;
+        }
+    }
+
+    .btn-form{
+        @include lg{
+            float: right;
+        }
+       
+        input[type='submit']{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: none;
+            color:$white;
+            background-color: $blue;
+            border:none;
+            width: 10rem;
+            height: 4rem;
+            cursor: pointer;
+            border-radius: .85rem;
+            margin-top: 0;
+            transition: all .3s ease;
+            font-size: 1.5rem;
+            &:hover{
+                background-color: $blue-dark;
+            }
+        }    
+    }
+}
+
+.page-video{
+    .container{
+        .image-text{
+            padding: 5.5rem 0;
+            margin-top: 0;
+            align-items: stretch;
+            border-bottom: 1px solid #d2d0d0;
+            .image{
+                @include lg{
+                    width: 37rem;
+                }
+            }
+            .content{
+                position: relative;
+                min-height: 25rem;
+                padding-bottom: 1rem;
+                h3{
+                    font-size: 2.2rem;
+                    font-weight: 900;
+                    color:$blue-dark;
+                    margin-bottom: 2.5rem !important;
+                }
+
+                p{
+                    margin-bottom: 6rem;
+                }
+
+                .link-video{
+                    text-transform: uppercase;
+                    color:$blue;
+                    float: right;
+                    display: block;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                    margin-top: 2rem;
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 1.5rem;
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        right: 0;
+                        width: 5px;
+                        height: 12px;
+                        background: url('../images/arrow-link-video.png') no-repeat center center;
+                    }
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.video-interna{
+    margin-top: 5rem;
+    iframe{
+        width: 100%;
+        height: 40rem;
+        object-fit: cover;
+        @include md{
+            height: 60rem;
+        }
+    }
+}

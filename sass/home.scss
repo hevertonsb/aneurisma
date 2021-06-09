@@ -1,0 +1,84 @@
+.section-depoimento{
+    @include background($blue-dark, url('../images/bg-depoimento.jpg'), $repeat:no-repeat, $position: center center, $attachment:initial, $size:cover);
+    color:$white;
+    h2{
+        text-transform: uppercase;
+        font-size: 2.7rem;
+        font-weight: 900;
+        @include lg{
+            max-width: 84%;
+            margin:0 auto 3rem;
+            padding-left: 1.7rem;
+        }
+    }
+    blockquote{
+        margin: 0;
+        @include lg{
+            max-width: 84%;
+            margin: auto;
+        }
+        p{
+            font-size: 1.6rem;
+            font-weight: 600;
+            position: relative;
+            padding: 40px 0 20px 1rem;
+            @include md{
+                padding: 20px 0 20px 4rem;
+            }
+            &:before, &:after{
+                position: absolute;
+                content: '';
+                width: 26px;
+                height: 21px;
+                display: inline-block;
+                background: url('../images/aspas-01.png');
+            }
+            &:before{
+                left: 0;
+                top: 0;
+            }
+            &:after{
+                bottom: 0;
+                right: 0;
+                transform: rotate(180deg);
+                @include md{
+                    bottom: -1rem;
+                }
+            }
+        }
+        span{
+            width: 100%;
+            text-align: right;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-top: 4.5rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.sub-header{
+    background-color: $blue;
+    color:$white;
+    height: 5rem;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: inherit;
+        font-size: 1.5rem;
+    }
+}
+
+.section-beneficios{
+    @include md{
+        background-image: 
+        url('../images/particulas-beneficios.png'),
+        url('../images/particulas-beneficios-02.png');
+        background-position:
+        left bottom,
+        right bottom;
+        background-repeat:no-repeat;
+    }
+}

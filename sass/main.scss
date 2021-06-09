@@ -1,0 +1,92 @@
+@import "variables";
+@import "mixins";
+@import "fonts";
+
+@import "header";
+@import "footer";
+
+@import "menu";
+
+@import "home";
+@import "internas";
+@import "components";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+// font-family: 'Josefin Sans', sans-serif;
+// font-family: 'Montserrat', sans-serif;
+// font-family: 'Nunito Sans', sans-serif;
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    @include transition(all .3s ease);
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+img{
+    max-width: 100%;
+    @include unselectable;
+}
+
+@include selection{
+    background-color: $blue-dark;
+    color:$white;
+}
+
+@include scrollbars(1.35em, $blue-dark);
+
+input,
+textarea {
+    @include input-placeholder {
+        color: $blue-dark;
+    }
+}
+
+.container {
+    margin: auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 3;
+    // border:1px solid #ccc;
+    @include xl{
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    @include mega-xl{
+        max-width: 1250px;
+    }
+}
+
+.page-section{
+    padding:4rem 0;
+    @include md{
+        padding:8rem 0;
+    }
+}
+
+
